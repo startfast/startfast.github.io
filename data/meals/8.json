@@ -1,0 +1,12 @@
+{
+  "id": "2",
+  "name": "Iced Caffe Latte",
+  "last_step": "2",
+  "steps": [
+    {
+      "id":"1", 
+      "value": "<b> Ingredients </b>: <i>milk</i>.", 
+      "video": "https://d2v9y0dukr6mq2.cloudfront.net/video/preview/HjH5lgeHeix7kfhup/videoblocks-barista-pour-hot-milk-into-a-coffee_hrh69dkam__SB_PM.mp4"
+    }
+  ]
+}

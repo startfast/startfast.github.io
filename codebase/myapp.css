@@ -1,0 +1,210 @@
+.webixappstart {
+  opacity: 0;
+}
+.webixapp {
+  transition: opacity 500ms;
+  opacity: 1;
+}
+/*data loading status*/
+.status_good,
+.status_error,
+.status_saving {
+  text-align: center;
+  margin-left: -12px;
+}
+.status_error {
+  color: red;
+}
+.status_good {
+  color: green;
+}
+/*login form*/
+.invalid_login .webix_header > div {
+  background: #FC3636;
+  transition: background 1s;
+}
+.invalid_login {
+  -webkit-animation: formshake .5s linear;
+}
+@-webkit-keyframes formshake {
+  8%,
+  41% {
+    -webkit-transform: translateX(-10px);
+  }
+  25%,
+  58% {
+    -webkit-transform: translateX(10px);
+  }
+  75% {
+    -webkit-transform: translateX(-5px);
+  }
+  92% {
+    -webkit-transform: translateX(5px);
+  }
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+.app_header.webix_header {
+  text-align: center;
+}
+.app_layout.webix_layout_clean {
+  background: #EBEDF0;
+}
+.app_start .webix_template {
+  padding: 12px 12px;
+}
+.app_menu .webix_icon {
+  font-size: 20px;
+  vertical-align: middle;
+}
+/**/
+body {
+  overflow: auto !important;
+}
+.webix_dataview_item.webix_selected {
+  background: #262626 !important;
+}
+.webix_switch_box.webix_switch_on {
+  background-color: #ffc000 !important;
+}
+body {
+  font-size: 18px;
+}
+.webix_inp_label,
+.webix_inp_top_label,
+legend.webix_forminput_label,
+.webix_el_label .webix_el_box {
+  font-size: 18px;
+}
+.webix_el_search input:focus,
+.webix_el_text input:focus,
+.webix_el_combo input:focus,
+.webix_el_colorpicker input:focus,
+.webix_el_datepicker input:focus {
+  border: 1px solid #eee;
+}
+.webix_el_text input,
+.webix_el_search input,
+.webix_el_combo input,
+.webix_el_datepicker input,
+.webix_el_colorpicker input {
+  font-size: 21px;
+  height: 40px;
+  padding: 0px 12px;
+  color: #fff;
+  background: #404040;
+  border-color: #ccc;
+  text-align: center;
+}
+.form_login,
+.webix_view.webix_form,
+.webix_view {
+  background: #262626;
+  border: medium none;
+  color: #fff;
+}
+.webix_view.webix_el_label {
+  background: #262626;
+  color: #fff;
+  text-align: center;
+}
+.webix_inp_textarea {
+  background: url(/assets/images/kitchen.jpg);
+}
+input::placeholder,
+input::-moz-placeholder,
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+.login_button .webix_button {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+.webix_secondary .webix_button {
+  background: #ffc000;
+  border-radius: 7px;
+  color: #000;
+  max-width: 100%;
+  font-size: 18px;
+}
+.webix_menu .webix_list_item,
+.webix_menu-x .webix_list_item {
+  background: #ffc000;
+  border-radius: 7px;
+  color: #000;
+  padding: 10px 30px;
+  max-width: 100%;
+  height: 50px !important;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 21px;
+  width: 280px !important;
+  margin: 10px auto;
+}
+.webix_go_cooking {
+  background: #ffc000;
+  border-radius: 7px;
+  color: #000;
+  padding: 10px;
+  height: 50px !important;
+  text-align: center;
+  font-size: 18px;
+  width: 80px !important;
+  margin: 20px auto;
+}
+.webix_inp_label,
+.webix_inp_top_label,
+legend.webix_forminput_label,
+.webix_el_label .webix_el_box {
+  color: #fff;
+}
+.login_image {
+  width: 100%;
+}
+.meals_name {
+  line-height: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 16px;
+}
+.webix_view {
+  margin: 0;
+}
+.webix_template {
+  padding: 0;
+  background: #262626;
+}
+.top_block {
+  background: url(/assets/images/kitchen.jpg) center center;
+  background-size: cover;
+  display: table;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 10px 1px #0a0a0a;
+}
+.top_block_p {
+  color: #fff;
+  text-align: center;
+  font-size: 9vw;
+  line-height: 1.2;
+  margin: auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+.top_block_p p {
+  color: yellow;
+  margin: 0px;
+}
+.content {
+  display: inline-block;
+}
+.webix_inp_label {
+  width: 90% !important;
+}
+.webix_checkbox_1 .webix_custom_checkbox {
+  color: #ffc000;
+}
+

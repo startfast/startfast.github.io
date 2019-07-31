@@ -1,0 +1,50 @@
+[
+	{
+		"id": "1",
+		"name": "Cappucino",
+		"price": "5$",
+		"image": "Cappucino"
+	},
+	{
+		"id": "2",
+		"name": "Caffe Mocha",
+		"price": "7$",
+		"image": "Caffe Mocha"
+	},
+	{
+		"id": "3",
+		"name": "Caramel Macchiato",
+		"price": "8$",
+		"image": "Caramel Macchiato"
+	},
+	{
+		"id": "4",
+		"name": "Crumble Frappuccino",
+		"price": "9$",
+		"image": "Crumble Frappuccino"
+	},
+	{
+		"id": "5",
+		"name": "Espresso Con Panna",
+		"price": "7$",
+		"image": "Espresso Con Panna"
+	},
+	{
+		"id": "6",
+		"name": "Hazelnut Macchiato",
+		"price": "8$",
+		"image": "Hazelnut Macchiato"
+	},
+	{
+		"id": "7",
+		"name": "Hot Chocolate",
+		"price": "7$",
+		"image": "Hot Chocolate"
+	},
+	{
+		"id": "8",
+		"name": "Iced Caffe Latte",
+		"price": "9$",
+		"image": "Iced Caffe Latte"
+	}
+]

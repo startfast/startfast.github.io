@@ -1,0 +1,31 @@
+{
+  "id": "1",
+  "name": "Cappucino",
+  "last_step": "5",
+  "steps": [
+    {
+      "id":"1", 
+      "value": "<b> Ingredients </b>: <i>milk</i>.", 
+      "video": "https://d2v9y0dukr6mq2.cloudfront.net/video/preview/VN__8Q8ueijkccu5c/videoblocks-freshly-ground-coffee-beans-in-the-portafilter_rsi6x58y4__SB_PM.mp4"
+    },
+    {
+      "id":"1", 
+      "value": "<b> Ingredients </b>: <i>milk</i>.", 
+      "video": "https://d2v9y0dukr6mq2.cloudfront.net/video/preview/HjH5lgeHeix7kfhup/videoblocks-old-barista-tamp-grinded-coffee-in-portafilter_brgmh4yaz__SB_PM.mp4"
+    },
+    {
+      "id":"1", 
+      "value": "<b> Ingredients </b>: <i>milk</i>.", 
+      "video": "https://d2v9y0dukr6mq2.cloudfront.net/video/preview/HjH5lgeHeix7kfhup/videoblocks-barista-whisk-milk-in-coffee-machine-with-hot-steam_sccxdpyrf__SB_PM.mp4"
+    },
+    {
+      "id":"1", 
+      "value": "<b> Ingredients </b>: <i>milk</i>.", 
+      "video": "https://d2v9y0dukr6mq2.cloudfront.net/video/preview/EeN01lAOxijss6byx/barista-steaming-milk-for-hot-cappuccino-coffee-with-machine_bgcjwdk9__SB_PM.mp4"
+    },{
+      "id":"1", 
+      "value": "<b> Ingredients </b>: <i>milk</i>.", 
+      "video": "https://d2v9y0dukr6mq2.cloudfront.net/video/preview/HjH5lgeHeix7kfhup/videoblocks-barista-pour-hot-milk-into-a-coffee_hrh69dkam__SB_PM.mp4"
+    }
+  ]
+}
