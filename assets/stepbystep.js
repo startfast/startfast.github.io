@@ -73,8 +73,9 @@ class StepByStep {
     let string_step = this.current_step+1;
     
     if (webix.prev_item == "/quiz") {
-      $$('cooking_dish_step').define('template', 'Question '+string_step+": "+this.steps[this.current_step].question);
-      console.log(this.steps[this.current_step].answers);
+      $$('cooking_dish_step').define('template', 'Question '+string_step);
+      $$('cooking_dish_value').define('template', this.steps[this.current_step].question);
+      $$('cooking_dish_value').refresh();
       $$("quiz_list").parse(this.steps[this.current_step].answers);
     } else {
       $$('cooking_dish_step').define('template', 'Step '+string_step);
@@ -83,10 +84,7 @@ class StepByStep {
         $$('cooking_dish_value').refresh();
       }
     }
-    $$('cooking_dish_step').refresh();
-
-    
-    
+    $$('cooking_dish_step').refresh();       
 
     this.video = $$("video").getVideo();
     this.video.setAttribute("autoplay", "1"); 
