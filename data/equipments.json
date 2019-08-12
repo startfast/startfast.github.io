@@ -1,0 +1,32 @@
+[
+	{
+		"id": "1",
+		"name": "Equipment 1",
+		"price": "5$",
+		"image": "Cappucino"
+	},
+	{
+		"id": "2",
+		"name": "Equipment 2",
+		"price": "7$",
+		"image": "Caffe Mocha"
+	},
+	{
+		"id": "3",
+		"name": "Equipment 3",
+		"price": "8$",
+		"image": "Caramel Macchiato"
+	},
+	{
+		"id": "4",
+		"name": "Equipment 4",
+		"price": "9$",
+		"image": "Crumble Frappuccino"
+	},
+	{
+		"id": "5",
+		"name": "Equipment 5",
+		"price": "7$",
+		"image": "Espresso Con Panna"
+	}
+]

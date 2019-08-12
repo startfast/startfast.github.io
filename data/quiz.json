@@ -1,0 +1,32 @@
+[
+	{
+		"id": "1",
+		"name": "quiz 1",
+		"price": "5$",
+		"image": "Cappucino"
+	},
+	{
+		"id": "2",
+		"name": "quiz 2",
+		"price": "7$",
+		"image": "Caffe Mocha"
+	},
+	{
+		"id": "3",
+		"name": "quiz 3",
+		"price": "8$",
+		"image": "Caramel Macchiato"
+	},
+	{
+		"id": "4",
+		"name": "quiz 4",
+		"price": "9$",
+		"image": "Crumble Frappuccino"
+	},
+	{
+		"id": "5",
+		"name": "quiz 5",
+		"price": "7$",
+		"image": "Espresso Con Panna"
+	}
+]

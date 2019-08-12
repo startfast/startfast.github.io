@@ -123,7 +123,8 @@ input::-webkit-input-placeholder {
   margin: 0 auto;
   display: block;
 }
-.webix_secondary .webix_button {
+.webix_secondary .webix_button,
+.webix_button {
   background: #ffc000;
   border-radius: 7px;
   color: #000;
@@ -206,5 +207,18 @@ legend.webix_forminput_label,
 }
 .webix_checkbox_1 .webix_custom_checkbox {
   color: #ffc000;
+}
+.webix_popup_button.confirm {
+  border-color: #ffc000;
+}
+.webix_popup_button.confirm {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffc000;
+  letter-spacing: 0px;
+  outline: none;
+  background: #ffc000;
+  color: #000;
 }
 

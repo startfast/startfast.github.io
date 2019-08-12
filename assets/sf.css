@@ -2,3 +2,47 @@
 .form_login, .webix_view.webix_form{
     background: #262626;
 }
+
+.quiz_list .webix_dataview_item.webix_selected {
+    color: #ffc000;
+}
+.quiz_list .webix_scroll_cont{
+    display: flex;
+    flex-wrap: wrap;
+    border: medium none;
+}
+
+.quiz_list .webix_dataview_item {
+    flex-shrink: 1;
+    border: medium none;
+}
+
+.quiz_list .webix_button{
+    min-height: 109px;
+    display: flex;
+    padding: 5px 32px 5px 12px;
+    background: #ffc000 url(/assets/images/check.png) right center no-repeat;
+    background-size: 27px;
+    font-size: 17px;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.quiz_list .webix_dataview_item {
+    padding: 5px;
+}
+
+.quiz_button_text{
+    flex: 1;
+}
+
+.quiz_button_check{
+    width: 20px;
+    padding-top: 3px;
+    align-self: center;
+}
+
+.quiz_list .webix_selected .webix_button{
+    background: #eee url(/assets/images/checked.png) right center no-repeat;
+    background-size: 27px;
+}
