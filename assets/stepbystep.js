@@ -75,8 +75,37 @@ class StepByStep {
     if (webix.prev_item == "/quiz") {
       $$('cooking_dish_step').define('template', 'Question '+string_step);
       $$('cooking_dish_value').define('template', this.steps[this.current_step].question);
-      $$('cooking_dish_value').refresh();
-      $$("quiz_list").parse(this.steps[this.current_step].answers);
+      $$('cooking_dish_value').refresh(); 
+      const answers = this.steps[this.current_step].answers;
+      let j = 0;
+			answers.forEach(element => {
+						
+				if ($$("answerView"+j)) {
+					$$('quiz_list').removeView("answerView"+j);
+				}
+				$$('quiz_list').addView({ id: "answerView"+j,
+					cols: [{
+							template: element.answer, autoheight: true, borderless: true,
+						},
+						{
+							width: 30
+						},
+						{
+							view: "switch", name: "answer" + j, uncheckValue:"off", checkValue: parseInt(element.cost) ? element.cost : "on", id:"answer" + j, required: true, value: 0, width: 70, padding: 0, on:{
+                onChange:function(newv,oldv) {
+                  const values = $$("quiz_list").getValues();
+                  for (let index in values) {
+                    if (index != this.config.name) {
+                      $$(index).setValue("off");                      
+										}
+										this.setValue(newv);
+                  }
+                }
+              }
+						}
+					]
+				}, j++);
+			});
     } else {
       $$('cooking_dish_step').define('template', 'Step '+string_step);
       if (this.steps[this.current_step].value) {
@@ -90,16 +119,65 @@ class StepByStep {
     this.video.setAttribute("autoplay", "1"); 
     this.video.src = this.steps[this.current_step].video;
   }
-  setQuizMarks(value) {
-    this.quizMarks.push(value);
+  setQuizAnswer(cost, answer) {
+    this.quizMarks.push({"question": this.current_step, "answer":answer, "cost":cost});
     return this.quizMarks;
-  }
+	}
   getQuizResult() {
-    var reducer = (accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue);
-    var result = this.quizMarks.reduce(reducer);
-    console.log("res",result);
-    console.log("this.quizMarks",this.quizMarks);
-    console.log("this.quizMarks.length",this.quizMarks.length);
-    return result / this.quizMarks.length * 100;
+		const obj = this.getThis();
+		let check = 0;
+		$$("quiz_list").hide();
+		$$("cooking_dish_step").hide();
+		$$("cooking_dish_value").hide();
+		$$("quiz_list_result").show();
+		$$("cooking_header").setValues({ name:"congratulations"});
+		while (check < this.last_step) {
+			try {
+				$$('quiz_list_result').addView({ 
+					id: "questionView"+check,
+					cols: [
+					{ view:"template", autoheight: true, borderless: true, width: 35,template:function(){
+						const answer = obj.steps[check].answers[obj.quizMarks[check].question].cost;
+						if (answer != 0 && answer != "off" && answer != "on") {
+              // good
+							return "<img src='/assets/images/right.png' width='18'>";
+            }
+            // bad
+						return "<img src='/assets/images/wrong.png' width='18'>";
+						} 
+					},{
+						view:"template", template: obj.steps[check].question, autoheight: true, borderless: true,
+					}]
+				}, check);
+				check++;
+			} catch (error) {
+				console.log(obj.steps);
+				console.log(check);
+				console.log(obj.steps[check].answers);	
+			}
+		}
+		var resultSum = 0;
+		obj.quizMarks.forEach(element => {
+			if (parseInt(element.cost)) {
+				resultSum += parseInt(element.cost);
+			}
+    });	
+    var month_dataset = [
+      { name:"right", amount: resultSum, color: "#57b447" },
+      { name:"wrong", amount: (obj.quizMarks.length - resultSum), color: "#CC0000" }
+    ];	
+		$$('quiz_list_result').addView({ 
+     
+        view: "chart",
+        type:"pie",
+        value:"#amount#",
+          color:"#color#",
+          label:"#name#",
+          pieInnerText:"#amount#",
+          shadow:0,
+          data:month_dataset
+   
+		//	template: "ur result is "+(resultSum/obj.quizMarks.length * 100)+"% of 100"
+		}, check);
   }
 }

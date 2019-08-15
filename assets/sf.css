@@ -46,3 +46,8 @@
     background: #eee url(/assets/images/checked.png) right center no-repeat;
     background-size: 27px;
 }
+
+.webix_chart .webix_chart_legend_item, .webix_chart .webix_canvas_text, .webix_chart .webix_axis_title_x, .webix_chart .webix_axis_title_y {
+    font-size: 14px;
+    color: #fff;
+}
