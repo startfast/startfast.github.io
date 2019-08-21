@@ -72,7 +72,7 @@ class StepByStep {
     }
     let string_step = this.current_step+1;
     
-    if (webix.prev_item == "/quiz") {
+    if (webix.prev_item == "/equipment") {
       $$('cooking_dish_step').define('template', 'Question '+string_step);
       $$('cooking_dish_value').define('template', this.steps[this.current_step].question);
       $$('cooking_dish_value').refresh(); 
@@ -136,8 +136,9 @@ class StepByStep {
 				$$('quiz_list_result').addView({ 
 					id: "questionView"+check,
 					cols: [
-					{ view:"template", autoheight: true, borderless: true, width: 35,template:function(){
-						const answer = obj.steps[check].answers[obj.quizMarks[check].question].cost;
+					{ view:"template", autoheight: true, borderless: true, width: 35,template:function(){            
+            const answered = obj.quizMarks[check].answer.toString().replace("answer", "");
+            const answer = obj.steps[check].answers[answered].cost;
 						if (answer != 0 && answer != "off" && answer != "on") {
               // good
 							return "<img src='/assets/images/right.png' width='18'>";
@@ -166,18 +167,30 @@ class StepByStep {
       { name:"right", amount: resultSum, color: "#57b447" },
       { name:"wrong", amount: (obj.quizMarks.length - resultSum), color: "#CC0000" }
     ];	
+    $$('quiz_list_result').addView({
+      template: "<center>Your result is <strong>"+(resultSum/obj.quizMarks.length * 100)+"%</strong></center>",
+      height: 15,    
+      padding:{
+        top: 10          
+      }  
+    }, check++);
 		$$('quiz_list_result').addView({ 
-     
         view: "chart",
         type:"pie",
+        minWidth: 250,
+        minHeight: 250,
+        maxWidth: 500,
+        maxHeight: 500,
         value:"#amount#",
-          color:"#color#",
-          label:"#name#",
-          pieInnerText:"#amount#",
-          shadow:0,
-          data:month_dataset
-   
+        color:"#color#",
+        //label:"#name#",
+        //pieInnerText:"#amount#",
+        shadow:1,
+        data:month_dataset,
+        padding:{
+          top: 10          
+        }
 		//	template: "ur result is "+(resultSum/obj.quizMarks.length * 100)+"% of 100"
-		}, check);
+		}, check++);
   }
 }

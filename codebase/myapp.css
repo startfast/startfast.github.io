@@ -200,6 +200,7 @@ legend.webix_forminput_label,
   margin: 0px;
 }
 .content {
+  padding: 0 10px;
   display: inline-block;
 }
 .webix_inp_label {

@@ -1,0 +1,111 @@
+{
+  "id": "1",
+  "name": "Card Payments",
+  "last_step": "4",
+  "steps": [
+    {
+      "id":"1", 
+      "question": "<b> You have swiped a customer’s card at the READY prompt and the terminal displays ‘CARD READ FAILURE. You may proceed with:</b>",
+      "answers": [
+        { 
+          "id": "1",
+          "answer": "Keying in the amount of the transaction and swiping the card again",
+          "cost": "0"
+        },
+        { 
+          "id": "2",
+          "answer": "Entering the customer’s card number when you see the READY prompt",
+          "cost": "1"
+        },
+        { 
+          "id": "3",
+          "answer": "Asking the customer to pay in cash",
+          "cost": "0"
+        },
+        { 
+          "id": "4",
+          "answer": "None of the above",
+          "cost": "0"
+        }
+      ]
+    },
+    {
+      "id":"2", 
+      "question": "<b> You need to make a Refund of the payment with Gratuity. You will proceed with:</b>",
+      "answers": [
+        { 
+          "id": "1",
+          "answer": "Paying the refund in cash with no gratuity",
+          "cost": "0"
+        },
+        { 
+          "id": "2",
+          "answer": "Choosing the Refund option and entering total amount incl. gratuity",
+          "cost": "1"
+        },
+        { 
+          "id": "3",
+          "answer": "Choosing the Refund option and entering total amount without gratuity",
+          "cost": "0"
+        },
+        { 
+          "id": "4",
+          "answer": "Explaining to the customer that we don't do refunds",
+          "cost": "0"
+        }
+      ]
+    },
+    {
+      "id":"3", 
+      "question": "<b>Transaction Reversal. The reversal can be made:</b>",
+      "answers": [
+        { 
+          "id": "1",
+          "answer": "within 30 seconds after the original payment transaction or refund",
+          "cost": "0"
+        },
+        { 
+          "id": "2",
+          "answer": "by choosing the Reversal option at the prompt menu",
+          "cost": "0"
+        },
+        { 
+          "id": "3",
+          "answer": "the receipt will be printed after the successful reversal",
+          "cost": "0"
+        },
+        { 
+          "id": "4",
+          "answer": "all above is correct",
+          "cost": "1"
+        }
+      ]
+    },
+    {
+      "id":"4", 
+      "question": "<b>Printing the transaction log. You can print:</b>",
+      "answers": [
+        { 
+          "id": "1",
+          "answer": "only 100 last transactions",
+          "cost": "1"
+        },
+        { 
+          "id": "2",
+          "answer": "all transactions for the last 24 hours",
+          "cost": "0"
+        },
+        { 
+          "id": "3",
+          "answer": "all transactions for chosen date and time interval",
+          "cost": "0"
+        },
+        { 
+          "id": "4",
+          "answer": "there is no such option",
+          "cost": "0"
+        }
+      ]
+    }
+  ]
+}
