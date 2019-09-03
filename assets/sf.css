@@ -51,3 +51,16 @@
     font-size: 14px;
     color: #fff;
 }
+
+.webix_dataview_item {
+    border-right-color: transparent;
+}
+
+@media(min-width: 992px){
+    .top_block_p {
+        font-size: 5em;
+    }
+    .top{
+        height: calc(100vh - 200px);
+    }
+}
