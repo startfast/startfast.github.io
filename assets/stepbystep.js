@@ -118,6 +118,7 @@ class StepByStep {
     this.video = $$("video").getVideo();
     this.video.setAttribute("autoplay", "1"); 
     this.video.src = this.steps[this.current_step].video;
+    this.video.play();
   }
   setQuizAnswer(cost, answer) {
     this.quizMarks.push({"question": this.current_step, "answer":answer, "cost":cost});
@@ -141,10 +142,10 @@ class StepByStep {
             const answer = obj.steps[check].answers[answered].cost;
 						if (answer != 0 && answer != "off" && answer != "on") {
               // good
-							return "<img src='/assets/images/right.png' width='18'>";
+							return "<img src='/assets/images/right.png' width='17'>";
             }
             // bad
-						return "<img src='/assets/images/wrong.png' width='18'>";
+						return "<img src='/assets/images/wrong.png' width='17'>";
 						} 
 					},{
 						view:"template", template: obj.steps[check].question, autoheight: true, borderless: true,
